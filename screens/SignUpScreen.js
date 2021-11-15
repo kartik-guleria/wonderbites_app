@@ -44,20 +44,36 @@ const SignUpScreen = props => {
             returnKeyType="next"
             secureText="false"
           />
-          <InputField
-            placeholder="Password*"
-            capitalize="none"
-            keyboardType="default"
-            returnKeyType="next"
-            secureText="true"
-          />
-          <InputField
-            placeholder="Confirm Password*"
-            capitalize="none"
-            keyboardType="default"
-            returnKeyType="next"
-            secureText="true"
-          />
+
+          <View style={MainStyle.SectionStyle}>
+            <TextInput
+              style={[
+                MainStyle.inputStyle,
+                {height: Platform.OS == 'android' ? 40 : 20},
+              ]}
+              placeholder="Password*"
+              placeholderTextColor="#2B2C2D"
+              autoCapitalize="none"
+              keyboardType="default"
+              returnKeyType="next"
+              underlineColorAndroid="#EFEFEF"
+              secureTextEntry={true}
+              blurOnSubmit={false}
+            />
+          </View>
+          <View style={MainStyle.SectionStyle}>
+            <TextInput
+              style={MainStyle.inputStyle}
+              placeholder="Confirm Password*"
+              placeholderTextColor="#2B2C2D"
+              autoCapitalize="none"
+              keyboardType="default"
+              returnKeyType="next"
+              underlineColorAndroid="#EFEFEF"
+              secureTextEntry={true}
+              blurOnSubmit={false}
+            />
+          </View>
 
           {/* <CheckBox
         value={isSelected}

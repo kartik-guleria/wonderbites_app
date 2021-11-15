@@ -4,11 +4,7 @@ import {
   TextInput,
   View,
   Text,
-  ScrollView,
   Image,
-  Keyboard,
-  SafeAreaView,
-  TouchableOpacity,
   KeyboardAvoidingView,
 } from 'react-native';
 import Mainstyles from '../src/styleSheet/MainStyle';

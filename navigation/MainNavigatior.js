@@ -2,9 +2,10 @@ import {Platform} from 'react-native';
 
 import Colors from '../constants/Colors.js';
 
-import {createAppContainer} from 'react-navigation';
+import {createBottomTabNavigator, createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 import AddAddressScreen from '../screens/AddAddressScreen';
 import AskAddressScreen from '../screens/AskAddressScreen';
@@ -121,10 +122,53 @@ const MainNavigatior = createStackNavigator(
     // headerTitle: 'Wonderbites',
   },
 );
-// const MainTabNavigator = createBottomTabNavigator({
-//   Delivery: HomeScreen,
-//   Services: MainScreen,
-//   // Orders: ConfirmationScreen,
-// });
 
+// const TabNavigator = createMaterialBottomTabNavigator(
+//   {
+//     Home: {
+//       screen: HomeScreen,
+//       navigationOptions: {
+//         tabBarLabel: 'Home',
+//         tabBarIcon: ({tintColor}) => (
+//           <View>
+//             <Icon style={[{color: tintColor}]} size={25} name={'ios-home'} />
+//           </View>
+//         ),
+//       },
+//     },
+//     Profile: {
+//       screen: ProfileScreen,
+//       navigationOptions: {
+//         tabBarLabel: 'Profile',
+//         tabBarIcon: ({tintColor}) => (
+//           <View>
+//             <Icon style={[{color: tintColor}]} size={25} name={'ios-person'} />
+//           </View>
+//         ),
+//         activeColor: '#f60c0d',
+//         inactiveColor: '#f65a22',
+//         barStyle: {backgroundColor: '#f69b31'},
+//       },
+//     },
+//     Cart: {
+//       screen: CartScreen,
+//       navigationOptions: {
+//         tabBarLabel: 'Cart',
+//         tabBarIcon: ({tintColor}) => (
+//           <View>
+//             <Icon style={[{color: tintColor}]} size={25} name={'ios-cart'} />
+//           </View>
+//         ),
+//       },
+//     },
+//   },
+//   {
+//     initialRouteName: 'Home',
+//     activeColor: '#f0edf6',
+//     inactiveColor: '#226557',
+//     barStyle: {backgroundColor: '#3BAD87'},
+//   },
+// );
+
+// export default createAppContainer(TabNavigator);
 export default createAppContainer(MainNavigatior);

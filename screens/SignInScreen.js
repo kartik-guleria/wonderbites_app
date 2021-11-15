@@ -29,13 +29,21 @@ const SignInScreen = props => {
           returnKeyType="next"
           secureText="false"
         />
-        <InputField
-          placeholder="Password"
-          capitalize="none"
-          keyboardType="default"
-          returnKeyType="next"
-          secureText="true"
-        />
+
+        <View style={MainStyle.SectionStyle}>
+          <TextInput
+            style={MainStyle.inputStyle}
+            placeholder="Password"
+            placeholderTextColor="#2B2C2D"
+            autoCapitalize="none"
+            keyboardType="default"
+            returnKeyType="done"
+            underlineColorAndroid="#EFEFEF"
+            secureTextEntry={true}
+            blurOnSubmit={false}
+          />
+        </View>
+
         <TouchableOpacity
           onPress={() => props.navigation.navigate('ResetPassword')}>
           <Text

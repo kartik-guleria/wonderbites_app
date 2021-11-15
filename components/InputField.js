@@ -14,7 +14,7 @@ const InputField = props => {
         keyboardType={props.keyboardType}
         returnKeyType={props.returnKeyType}
         underlineColorAndroid="#EFEFEF"
-        secureTextEntry={props.secureText}
+        // secureTextEntry={secureText}
         blurOnSubmit={false}
       />
     </View>

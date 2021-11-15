@@ -319,13 +319,14 @@ export default StyleSheet.create({
 
   inputStyle: {
     flex: 1,
-    borderBottomWidth: 1,
+    borderBottomWidth: Platform.OS == 'android' ? 0 : 1,
     borderBottomColor: '#dadae8',
     fontSize: 16,
     color: Colors.textColor,
     fontFamily: 'Gotham-Light',
     lineHeight: 16,
     marginLeft: 6,
+    height: Platform.OS == 'android' ? 40 : 20,
     marginRight: 6,
   },
 
@@ -396,6 +397,7 @@ export default StyleSheet.create({
     padding: 3,
   },
   registerTextStyleRed: {
+    marginTop: Platform.OS == 'android' ? 10 : 0,
     color: Colors.primaryColor,
   },
   headerTitle: {
