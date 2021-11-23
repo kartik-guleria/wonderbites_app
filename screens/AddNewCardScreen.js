@@ -5,13 +5,8 @@ import {
   Text,
   Image,
   StyleSheet,
-  SafeAreaView,
-  Button,
-  TouchableOpacity,
   ScrollView,
-  FlatList,
 } from 'react-native';
-import {color} from 'react-native-reanimated';
 import MyButton from '../components/MyButton';
 import Colors from '../constants/Colors';
 import MainStyle from '../src/styleSheet/MainStyle';

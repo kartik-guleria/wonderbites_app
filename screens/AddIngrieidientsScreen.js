@@ -3,13 +3,11 @@ import {
   View,
   Text,
   StyleSheet,
-  ScrollView,
   TouchableOpacity,
   FlatList,
   Image,
   Dimensions,
 } from 'react-native';
-import {HeaderButtons, Item} from 'react-navigation-header-buttons';
 import MainStyles from '../src/styleSheet/MainStyle';
 import {
   INGRIDIENTS,
@@ -19,7 +17,6 @@ import {
 } from '../data/dummy-data';
 import Colors from '../constants/Colors';
 import UnderlineView from '../components/underlineView';
-import {RotationGestureHandler} from 'react-native-gesture-handler';
 
 const AddIngrieidientsScreen = props => {
   const prodId = props.navigation.getParam('productId');
@@ -28,7 +25,7 @@ const AddIngrieidientsScreen = props => {
   const renderCategoryGridItem = itemData => {
     return (
       <TouchableOpacity
-        style={styles.menuItem}
+        style={MainStyles.menuItem}
         onPress={() =>
           props.navigation.navigate('Category', {categoryId: itemData.item.id})
         }>
@@ -82,7 +79,7 @@ const AddIngrieidientsScreen = props => {
   const renderAddGridItem = itemData => {
     return (
       <TouchableOpacity
-        style={styles.menuItem}
+        style={MainStyles.menuItem}
         onPress={() =>
           props.navigation.navigate('Category', {categoryId: itemData.item.id})
         }>
@@ -142,7 +139,7 @@ const AddIngrieidientsScreen = props => {
   const renderCuisinesItem = items => {
     return (
       // <TouchableOpacity
-      //   style={styles.menuItem}
+      //   style={MainStyles.menuItem}
       //   onPress={() =>
       //     props.navigation.navigate('Category', {categoryId: itemData.item.id})
       //   }>
@@ -197,7 +194,7 @@ const AddIngrieidientsScreen = props => {
           ramen, brown sugar, honey roasted,
         </Text>
         <UnderlineView />
-        <Text style={styles.menuItem}>INGRIDIENTS </Text>
+        <Text style={MainStyles.menuItem}>INGRIDIENTS </Text>
       </View>
     );
   };
@@ -229,12 +226,9 @@ const AddIngrieidientsScreen = props => {
             marginBottom: 50,
             justifyContent: 'space-between',
             width: '95%',
-            // marginTop: 10,
             marginLeft: 10,
             borderTopColor: '#dddddd',
             borderTopWidth: 1,
-
-            // alignItems: 'space-between',
           }}>
           <TouchableOpacity
             style={[styles.buttonStyleGray, {width: '47%', marginTop: 40}]}
@@ -261,9 +255,8 @@ const AddIngrieidientsScreen = props => {
     );
   };
   return (
-    // <ScrollView>
-    <View style={styles.screen}>
-      <View style={{backgroundColor: '#FFFFFF', width: '100%'}}>
+    <View style={MainStyles.screen}>
+      <View style={{backgroundColor: '#FFFFFF', flex: 1}}>
         <FlatList
           style={{marginLeft: 8, marginRight: 8}}
           numColumns={3}
@@ -275,12 +268,10 @@ const AddIngrieidientsScreen = props => {
         />
       </View>
     </View>
-    // </ScrollView>
   );
 };
 AddIngrieidientsScreen.navigationOptions = navigationData => {
-  const prodId = navigationData.navigation.getParam('productId');
-  const selectedProduct = PRODUCTS.find(product => product.id === prodId);
+  // const prodId = navigationData.navigation.getParam('productId');
   return {
     headerTitle: <Text style={MainStyles.headerTitle}> </Text>,
     headerLeft: null,
@@ -288,43 +279,20 @@ AddIngrieidientsScreen.navigationOptions = navigationData => {
 };
 
 const styles = StyleSheet.create({
-  screen: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#FFFFFF',
-  },
-  menuItem: {
-    textAlign: 'left',
-    fontWeight: '700',
-    fontSize: 15,
-    color: '#2B2C2D',
-    fontFamily: 'Gotham',
-    fontSize: 15,
-    alignSelf: 'flex-start',
-    // marginTop: 5,
-    marginBottom: 8,
-    lineHeight: 16.58,
-  },
   textTitle: {
-    textAlign: 'left',
+    textAlign: 'center',
     fontWeight: '700',
-    fontSize: 22,
     color: '#2B2C2D',
     fontFamily: 'Gotham',
     fontSize: 18,
     alignSelf: 'flex-start',
-    textAlign: 'center',
     justifyContent: 'center',
-    // marginTop: 10,
     marginBottom: 10,
     lineHeight: 20,
   },
   productItem: {
     backgroundColor: '#FFFFFF',
     borderRadius: 10,
-    // overflow: 'hidden',
-    // margin: 20,
     borderColor: Colors.primaryColor,
     shadowColor: '#000000',
     shadowOpacity: 0.15,
@@ -341,8 +309,6 @@ const styles = StyleSheet.create({
     height: 49,
     alignItems: 'center',
     borderRadius: 12,
-    // marginLeft: 15,
-    // marginRight: 15,
     marginBottom: 25,
     justifyContent: 'center',
     color: '#FFFFFF',
@@ -362,7 +328,6 @@ const styles = StyleSheet.create({
     color: '#000000',
     marginBottom: -25,
     justifyContent: 'center',
-    color: '#000000',
     fontFamily: 'Gotham',
     fontWeight: '500',
   },

@@ -1,15 +1,12 @@
 // chat support screen
 import React from 'react';
 import {
-  SafeAreaView,
   Text,
   View,
   StyleSheet,
   Image,
   TouchableOpacity,
   ScrollView,
-  Button,
-  FlatList,
   TextInput,
 } from 'react-native';
 import MainStyle from '../src/styleSheet/MainStyle';
@@ -229,11 +226,10 @@ const styles = StyleSheet.create({
     marginTop: 3,
   },
   typing: {
-    marginTop: 14,
     color: '#FFFFFF',
     marginLeft: 14,
     fontSize: 80,
-    marginTop: -50,
+    marginTop: -35,
   },
   messageBox: {
     flexDirection: 'row',

@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  SafeAreaView,
   View,
   FlatList,
   Text,
@@ -11,16 +10,17 @@ import {
 import MainStyle from '../src/styleSheet/MainStyle';
 import UnderlineView from '../components/underlineView';
 import WaterMarkView from '../components/WaterMarkView';
-// import {Icon} from 'react-native-elements';
 
 const DATA = [
   {
     id: '1',
     title: 'Change Email',
+    screen: 'ChangeEmail',
   },
   {
     id: '2',
     title: 'Delete Account',
+    screen: '',
   },
 ];
 
@@ -29,7 +29,6 @@ const AccountSettingScreen = props => {
     <View>
       <View>
         <TouchableOpacity
-          // style={styles.menuItem}
           onPress={() =>
             props.navigation.navigate('ChangeEmail', {
               categoryId: title,
@@ -94,7 +93,7 @@ AccountSettingScreen.navigationOptions = {
   headerBackImage: (
     <Image
       source={require('../src/images/back.png')}
-      style={{width: 12, height: 21, marginLeft: 16, resizeMode: 'contain'}}
+      style={MainStyle.navBackButton}
     />
   ),
   headerBackTitleVisible: false,

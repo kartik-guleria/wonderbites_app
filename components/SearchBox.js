@@ -25,7 +25,6 @@ const SearchBox = props => {
         keyboardType={props.keyboardType}
         returnKeyType="search"
         underlineColorAndroid="#EFEFEF"
-        secureTextEntry="false"
         blurOnSubmit={false}
       />
     </View>

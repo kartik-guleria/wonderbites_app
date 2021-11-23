@@ -1,21 +1,17 @@
 import React from 'react';
 import {
-  MainStyleheet,
   TextInput,
   View,
   Text,
-  ScrollView,
   Image,
   StatusBar,
-  Button,
-  Keyboard,
   TouchableOpacity,
-  KeyboardAvoidingView,
-  StyleSheet,
 } from 'react-native';
 import MyButton from '../components/MyButton';
 import MainStyle from '../src/styleSheet/MainStyle';
 import InputField from '../components/InputField';
+import Home from '../screens/HomeScreen';
+import Main from '../screens/MainScreen';
 const SignInScreen = props => {
   return (
     <View style={MainStyle.mainBody}>
@@ -69,7 +65,18 @@ const SignInScreen = props => {
 
         <TouchableOpacity
           style={{marginTop: -12}}
-          onPress={() => props.navigation.navigate('SignUp')}>
+          // onPress={() => props.navigation.navigate('SignUp')}>
+          onPress={() =>
+            props.navigation.navigate('TabNavigator', {
+              screen: Home, // <--- StackNavigator
+              params: {
+                screen: Main, // <-- nested inside HomeStack
+                params: {
+                  title: 'Your custom title for Select screen here ...',
+                },
+              },
+            })
+          }>
           <Text
             style={MainStyle.registerTextStyle}
             // onPress={() => navigation.navigate('RegisterScreen')}
@@ -93,13 +100,6 @@ SignInScreen.navigationOptions = {
     />
   ),
   headerBackTitleVisible: false,
-  // headerRight: () => (
-  //   <Button
-  //     onPress={() => alert('This is a button!')}
-  //     title="Info"
-  //     color="#000"
-  //   />
-  // ),
 };
 
 export default SignInScreen;

@@ -1,11 +1,100 @@
+// import React from 'react';
+// import {Button, View, Text} from 'react-native';
+// import {createDrawerNavigator} from '@react-navigation/drawer';
+// import {NavigationContainer} from '@react-navigation/native';
+// import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+// import {createStackNavigator} from '@react-navigation/stack';
+// import {Ionicons} from '@expo/vector-icons';
+// const Tab = createBottomTabNavigator();
+// function HomeScreen() {
+//   return (
+//     <Tab.Navigator
+//       screenOptions={({route}) => ({
+//         tabBarIcon: ({focused, color, size}) => {
+//           let iconName;
+//           if (route.name === 'TabA') {
+//             iconName = focused
+//               ? 'ios-information-circle'
+//               : 'ios-information-circle-outline';
+//           } else if (route.name === 'TabB') {
+//             iconName = focused ? 'ios-list-box' : 'ios-list';
+//           }
+//           return <Ionicons name={iconName} size={size} color={color} />;
+//         },
+//       })}
+//       tabBarOptions={{
+//         activeTintColor: 'tomato',
+//         inactiveTintColor: 'gray',
+//       }}>
+//       <Tab.Screen name="TabA" component={TabAScreen} />
+//       <Tab.Screen name="TabB" component={TabBScreen} />
+//     </Tab.Navigator>
+//   );
+// }
+// function NotificationsScreen({navigation}) {
+//   return (
+//     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+//       <Text>No New Notifications!</Text>
+//       <Button onPress={() => navigation.goBack()} title="Go back home" />
+//     </View>
+//   );
+// }
+// const Stack = createStackNavigator();
+// function TabAScreen() {
+//   return (
+//     <Stack.Navigator>
+//       <Stack.Screen name="TabA Home" component={TabADetailsScreen} />
+//       <Stack.Screen name="TabA Details" component={Details} />
+//     </Stack.Navigator>
+//   );
+// }
+// function TabADetailsScreen({navigation}) {
+//   return (
+//     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+//       <Text>Welcome to TabA page!</Text>
+//       <Button
+//         onPress={() => navigation.navigate('TabA Details')}
+//         title="Go to TabA Details"
+//       />
+//     </View>
+//   );
+// }
+// function Details() {
+//   return (
+//     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+//       <Text>TabA Details here!</Text>
+//     </View>
+//   );
+// }
+// function TabBScreen() {
+//   return (
+//     <View>
+//       <Text style={{textAlign: 'center', marginTop: 300}}>
+//         Welcome to TabB page!
+//       </Text>
+//     </View>
+//   );
+// }
+// const Drawer = createDrawerNavigator();
+// export default function App() {
+//   return (
+//     <NavigationContainer>
+//       <Drawer.Navigator initialRouteName="Home">
+//         <Drawer.Screen name="Home" component={HomeScreen} />
+//         <Drawer.Screen name="Notifications" component={NotificationsScreen} />
+//       </Drawer.Navigator>
+//     </NavigationContainer>
+//   );
+// }
 import {Platform} from 'react-native';
-
+import React, {Component} from 'react';
 import Colors from '../constants/Colors.js';
 
-import {createBottomTabNavigator, createAppContainer} from 'react-navigation';
+import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
-import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
-import Icon from 'react-native-vector-icons/Ionicons';
+
+import {NavigationContainer} from '@react-navigation/native';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 import AddAddressScreen from '../screens/AddAddressScreen';
 import AskAddressScreen from '../screens/AskAddressScreen';
@@ -115,60 +204,76 @@ const MainNavigatior = createStackNavigator(
     initialRouteName: 'WelcomeN',
     defaultNavigationOptions: {
       headerStyle: {
-        backgroundColor: Platform.OS === 'android' ? Colors.headerColor : '',
+        backgroundColor:
+          Platform.OS === 'android' ? Colors.headerColor : Colors.headerColor,
       },
-      headerTintColor: Platform.OS === 'android' ? 'white' : Colors.headerColor,
+      headerTintColor:
+        Platform.OS === 'android' ? Colors.headerColor : Colors.headerColor,
     },
     // headerTitle: 'Wonderbites',
   },
 );
-
-// const TabNavigator = createMaterialBottomTabNavigator(
-//   {
-//     Home: {
-//       screen: HomeScreen,
-//       navigationOptions: {
-//         tabBarLabel: 'Home',
-//         tabBarIcon: ({tintColor}) => (
-//           <View>
-//             <Icon style={[{color: tintColor}]} size={25} name={'ios-home'} />
-//           </View>
-//         ),
-//       },
-//     },
-//     Profile: {
-//       screen: ProfileScreen,
-//       navigationOptions: {
-//         tabBarLabel: 'Profile',
-//         tabBarIcon: ({tintColor}) => (
-//           <View>
-//             <Icon style={[{color: tintColor}]} size={25} name={'ios-person'} />
-//           </View>
-//         ),
-//         activeColor: '#f60c0d',
-//         inactiveColor: '#f65a22',
-//         barStyle: {backgroundColor: '#f69b31'},
-//       },
-//     },
-//     Cart: {
-//       screen: CartScreen,
-//       navigationOptions: {
-//         tabBarLabel: 'Cart',
-//         tabBarIcon: ({tintColor}) => (
-//           <View>
-//             <Icon style={[{color: tintColor}]} size={25} name={'ios-cart'} />
-//           </View>
-//         ),
-//       },
-//     },
+// const TabNavigator = createBottomTabNavigator({
+//   Home: HomeScreen,
+//   Profile: ProfileScreen,
+// Home: {
+//   screen: MainNavigatior,
+//   navigationOptions: {
+//     tabBarLabel: 'Home',
+//     tabBarIcon: ({tintColor}) => (
+//       <View>
+//         <Icon style={[{color: tintColor}]} size={25} name={'ios-home'} />
+//       </View>
+//     ),
 //   },
-//   {
-//     initialRouteName: 'Home',
-//     activeColor: '#f0edf6',
-//     inactiveColor: '#226557',
-//     barStyle: {backgroundColor: '#3BAD87'},
+// },
+// Profile: {
+//   screen: ProfileScreen,
+//   navigationOptions: {
+//     tabBarLabel: 'Profile',
+//     tabBarIcon: ({tintColor}) => (
+//       <View>
+//         <Icon style={[{color: tintColor}]} size={25} name={'ios-person'} />
+//       </View>
+//     ),
+//     activeColor: '#f60c0d',
+//     inactiveColor: '#f65a22',
+//     barStyle: {backgroundColor: '#f69b31'},
 //   },
-// );
+// },
+// Cart: {
+//   screen: CartScreen,
+//   navigationOptions: {
+//     tabBarLabel: 'Cart',
+//     tabBarIcon: ({tintColor}) => (
+//       <View>
+//         <Icon style={[{color: tintColor}]} size={25} name={'ios-cart'} />
+//       </View>
+//     ),
+//   },
+// },
+// },
+// {
+//   initialRouteName: 'Home',
+//   activeColor: '#f0edf6',
+//   inactiveColor: '#226557',
+//   barStyle: {backgroundColor: '#3BAD87'},
+// },
+// });
 
 // export default createAppContainer(TabNavigator);
+
 export default createAppContainer(MainNavigatior);
+
+// const Tab = createBottomTabNavigator();
+
+// export default function App() {
+//   return (
+//     <NavigationContainer>
+//       <Tab.Navigator>
+//         <Tab.Screen name="Home" component={HomeScreen} />
+//         <Tab.Screen name="Settings" component={SettingsScreen} />
+//       </Tab.Navigator>
+//     </NavigationContainer>
+//   );
+// }

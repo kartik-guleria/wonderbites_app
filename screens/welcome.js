@@ -17,7 +17,11 @@ import MyButton from '../components/MyButton';
 import MyGrayButton from '../components/MyGrayButton';
 import MainStyle from '../src/styleSheet/MainStyle';
 import Colors from '../constants/Colors';
+import Geolocation from '@react-native-community/geolocation';
+
 const welcome = props => {
+  Geolocation.getCurrentPosition(data => console.warn(data));
+  console.warn('Geolocation');
   return (
     <SafeAreaView style={MainStyle.safeAreaContainer}>
       <StatusBar barStyle="light-content" />

@@ -24,7 +24,6 @@ const MainScreen = props => {
   const renderContent = () => (
     <View
       style={{
-        backgroundColor: 'white',
         padding: 16,
         height: '100%',
         backgroundColor: '#FFFFFF',
@@ -33,13 +32,13 @@ const MainScreen = props => {
         borderTopWidth: 2,
       }}>
       <Image
-        style={{height: '100%', width: '100%'}}
+        style={{height: '100%', flex: 1}}
         source={require('../src/images/filterbg.png')}
       />
     </View>
   );
   const sheetRef = React.useRef(null);
-  fall = new Animated.Value(1);
+  // fall = new Animated.Value(1);
 
   const serviceId = props.navigation.getParam('serviceId');
   const selectedService = SERVICES.find(service => service.id === serviceId);
@@ -96,7 +95,6 @@ const MainScreen = props => {
           borderWidth: 1,
           borderRadius: 12,
           height: 34,
-          // marginRight: 16,
           marginLeft: 16,
           marginTop: 5,
           marginBottom: 5,
@@ -109,7 +107,6 @@ const MainScreen = props => {
             alignItems: 'center',
             flex: 1,
             height: 34,
-            // margin: 5,
           }}>
           <Text
             style={{
@@ -165,10 +162,8 @@ const MainScreen = props => {
                   style={{
                     justifyContent: 'flex-end',
                     width: '94%',
-                    // height: 80,
                     borderRadius: 20,
                     alignSelf: 'center',
-                    // margin: 8,
                   }}
                   source={require('../src/images/banner.png')}
                 />
@@ -177,12 +172,12 @@ const MainScreen = props => {
           </View>
         </View>
       </ScrollView>
-      <BottomSheet
+      {/* <BottomSheet
         ref={sheetRef}
         snapPoints={[650, 0]}
         borderRadius={10}
         renderContent={renderContent}
-      />
+      /> */}
     </>
   );
 };

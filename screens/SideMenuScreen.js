@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  SafeAreaView,
   View,
   FlatList,
   Text,
@@ -15,35 +14,37 @@ import UnderlineView from '../components/underlineView';
 
 const DATA = [
   {
-    id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
+    id: 1,
     icon_image: require('../src/images/Phone.png'),
     title: 'Call us',
+    screen: '',
   },
   {
-    id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
+    id: 2,
     icon_image: require('../src/images/Terms.png'),
     title: 'Terms',
+    screen: 'TermsCondition',
   },
   {
-    id: '58694a0f-3da1-471f-bd96-145571e29d72',
+    id: 3,
     icon_image: require('../src/images/Privacy.png'),
     title: 'Privacy policy',
+    screen: 'TermsCondition',
   },
   {
-    id: '58694a0f-3da1-471f-bd96-145571e29d72',
+    id: 4,
     icon_image: require('../src/images/currency.png'),
     title: 'Content policy',
+    screen: 'TermsCondition',
   },
   {
-    id: '58694a0f-3da1-471f-bd96-145571e29d72',
+    id: 5,
     icon_image: require('../src/images/Lang.png'),
     title: 'English',
+    screen: 'SelectLang',
   },
 ];
 
-const Header = props => {
-  return <View></View>;
-};
 const getFooter = () => {
   return (
     <View>
@@ -147,8 +148,9 @@ const SideMenuScreen = props => {
             <TouchableOpacity
               style={[MainStyle.descText, {textAlign: 'left'}]}
               onPress={() => {
-                console.log('Hi from React Native');
-                Linking.openURL('tel:999990000');
+                item.id === 1
+                  ? Linking.openURL('tel:999990000')
+                  : props.navigation.navigate(item.screen);
               }}>
               <View style={MainStyle.row}>
                 <Image
@@ -169,7 +171,6 @@ const SideMenuScreen = props => {
             </TouchableOpacity>
           )}
           keyExtractor={item => item.id}
-          ListHeaderComponent={Header}
           ListFooterComponent={getFooter}
         />
       </View>

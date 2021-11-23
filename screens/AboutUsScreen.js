@@ -1,9 +1,6 @@
 import React from 'react';
-import {View, Text, StyleSheet, Image, StatusBar} from 'react-native';
+import {View, Text, Image, StatusBar} from 'react-native';
 import MainStyles from '../src/styleSheet/MainStyle';
-import MyGrayButton from '../components/MyGrayButton';
-import MyButton from '../components/MyButton';
-import Colors from '../constants/Colors';
 import UnderlineView from '../components/underlineView';
 import WaterMarkView from '../components/WaterMarkView';
 
@@ -13,8 +10,8 @@ const AboutUsScreen = props => {
       <StatusBar barStyle="dark-content" />
       <UnderlineView />
       <View style={{margin: 20, marginTop: 0}}>
-        <Text style={styles.title}>Customer</Text>
-        <Text style={styles.description}>
+        <Text style={MainStyles.aboutPageTitle}>Customer</Text>
+        <Text style={MainStyles.aboutPageDesc}>
           "Customer" or "You" or "Your" refers to you, as a customer of the
           Services. A customer is someone who accesses or uses the Services for
           the purpose of sharing, displaying, hosting, publishing, transacting,
@@ -23,8 +20,8 @@ const AboutUsScreen = props => {
           limitation a user having access to 'restaurant business page' to
           manage claimed business listings or otherwise.
         </Text>
-        <Text style={styles.title}>Content</Text>
-        <Text style={styles.description}>
+        <Text style={MainStyles.aboutPageTitle}>Content</Text>
+        <Text style={MainStyles.aboutPageDesc}>
           "Content" will include (but is not limited to) reviews, images,
           photos, audio, video, location data, nearby places, and all other
           forms of information or data. "Your content" or "Customer Content"
@@ -33,8 +30,10 @@ const AboutUsScreen = props => {
           photos, messages, profile information, and any other materials that
           you publicly display or displayed in your account profile.
         </Text>
-        <Text style={styles.title}>Eligibility to use the services</Text>
-        <Text style={styles.description}>
+        <Text style={MainStyles.aboutPageTitle}>
+          Eligibility to use the services
+        </Text>
+        <Text style={MainStyles.aboutPageDesc}>
           You hereby represent and warrant that you are at least eighteen (18)
           years of age or above and are fully able and competent to understand
           and agree the terms, conditions, obligations, affirmations,
@@ -57,28 +56,8 @@ AboutUsScreen.navigationOptions = {
   headerBackImage: (
     <Image
       source={require('../src/images/back.png')}
-      style={{width: 12, height: 21, marginLeft: 16, resizeMode: 'contain'}}
+      style={MainStyles.navBackButton}
     />
   ),
   headerBackTitleVisible: false,
 };
-const styles = StyleSheet.create({
-  title: {
-    color: Colors.textColor,
-    fontFamily: 'Gotham',
-    fontSize: 12,
-    fontWeight: '700',
-    textAlign: 'left',
-  },
-  description: {
-    color: '#2B2C2D',
-    fontFamily: 'Gotham',
-    fontSize: 12,
-    width: '100%',
-    alignSelf: 'center',
-    textAlign: 'left',
-    justifyContent: 'center',
-    marginTop: 12,
-    marginBottom: 12,
-  },
-});

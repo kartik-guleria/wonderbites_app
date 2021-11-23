@@ -1,13 +1,11 @@
 import React from 'react';
 import {
-  SafeAreaView,
   Text,
   View,
   StyleSheet,
   Image,
   TouchableOpacity,
   ScrollView,
-  Button,
 } from 'react-native';
 import MainStyle from '../src/styleSheet/MainStyle';
 import Colors from '../constants/Colors';

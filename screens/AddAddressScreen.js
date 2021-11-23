@@ -1,13 +1,10 @@
 import React from 'react';
 import {
   StyleSheet,
-  TextInput,
   View,
   Text,
   ScrollView,
   Image,
-  Keyboard,
-  TouchableOpacity,
   KeyboardAvoidingView,
 } from 'react-native';
 import MyButton from '../components/MyButton';

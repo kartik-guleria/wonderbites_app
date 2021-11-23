@@ -1,15 +1,12 @@
 import React from 'react';
 import {
-  StyleSheet,
   TextInput,
   View,
   Text,
   ScrollView,
   Image,
   StatusBar,
-  Keyboard,
   TouchableOpacity,
-  KeyboardAvoidingView,
 } from 'react-native';
 import MyButton from '../components/MyButton';
 import MainStyle from '../src/styleSheet/MainStyle';
@@ -47,10 +44,7 @@ const SignUpScreen = props => {
 
           <View style={MainStyle.SectionStyle}>
             <TextInput
-              style={[
-                MainStyle.inputStyle,
-                {height: Platform.OS == 'android' ? 40 : 20},
-              ]}
+              style={MainStyle.inputStyle}
               placeholder="Password*"
               placeholderTextColor="#2B2C2D"
               autoCapitalize="none"

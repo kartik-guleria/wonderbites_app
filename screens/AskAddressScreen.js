@@ -11,17 +11,43 @@ import MyButton from '../components/MyButton';
 import MainStyle from '../src/styleSheet/MainStyle';
 import MyGrayButton from '../components/MyGrayButton';
 import SearchBox from '../components/SearchBox';
+import MapView from 'react-native-maps';
+import {Marker} from 'react-native-maps';
+import Geolocation from '@react-native-community/geolocation';
+
 const AskAddressScreen = props => {
+  Geolocation.getCurrentPosition(data => console.warn(data));
+  console.warn('Geolocation');
   return (
     <View style={MainStyle.MainContainerLight}>
       <StatusBar barStyle="dark-content" />
-      <Image
-        source={require('../src/images/Mapbg.png')}
-        style={{width: '100%', height: '100%', resizeMode: 'cover'}}
-      />
+      <MapView
+        width="100%"
+        height="100%"
+        style={styles.map}
+        initialRegion={{
+          latitude: 37.78825,
+          longitude: -122.4324,
+          latitudeDelta: 0.0922,
+          longitudeDelta: 0.0421,
+        }}>
+        {/* <Marker
+          coordinate={{latitude: 37.78825, longitude: -122.4324}}
+          image={require('../src/images/animationlocation.gif')}
+        /> */}
+        <MapView.Marker
+          minDelta={0.5}
+          maxDelta={2}
+          coordinate={{latitude: 37.78825, longitude: -122.4324}}>
+          <Image
+            style={{height: 100, width: 100}}
+            source={require('../src/images/animationlocation.gif')}
+          />
+        </MapView.Marker>
+      </MapView>
       <View
         style={{
-          top: 64,
+          // top: 64,
           position: 'absolute',
           width: '100%',
           flexDirection: 'row',
@@ -138,6 +164,9 @@ AskAddressScreen.navigationOptions = {
   headerShown: false,
 };
 const styles = StyleSheet.create({
+  map: {
+    flex: 1,
+  },
   screen: {
     flex: 1,
     justifyContent: 'center',

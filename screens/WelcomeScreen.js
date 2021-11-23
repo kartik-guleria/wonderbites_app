@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  StatusBar,
-  TouchableOpacity,
-  SafeAreaView,
-} from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
 import MyButton from '../components/MyButton';
 import MainStyle from '../src/styleSheet/MainStyle';
 

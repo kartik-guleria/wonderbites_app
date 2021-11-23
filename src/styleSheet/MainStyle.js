@@ -1,4 +1,4 @@
-import {StyleSheet, Dimensions} from 'react-native';
+import {StyleSheet, Dimensions, Platform} from 'react-native';
 import Colors from '../../constants/Colors';
 
 export default StyleSheet.create({
@@ -12,16 +12,6 @@ export default StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#FFFFFF',
   },
-  shadowProp: {
-    shadowColor: '#000000',
-    shadowOffset: {width: 2, height: 2},
-    shadowOpacity: 0.15,
-    shadowRadius: 12,
-    // overflow: 'hidden',
-    borderColor: '#dddddd',
-    borderRadius: 12,
-    borderWidth: 1,
-  },
   BoxShadow: {
     shadowColor: 'black',
     shadowOpacity: 0.25,
@@ -31,10 +21,14 @@ export default StyleSheet.create({
     // overflow: 'hidden',
   },
   menuItem: {
-    width: 90,
-    height: 100,
-    marginTop: 5,
-    margin: 2,
+    textAlign: 'left',
+    fontWeight: '700',
+    fontSize: 15,
+    color: '#2B2C2D',
+    fontFamily: 'Gotham',
+    alignSelf: 'flex-start',
+    marginBottom: 8,
+    lineHeight: 16.58,
   },
   wrapperView: {
     borderTopWidth: 1,
@@ -57,15 +51,7 @@ export default StyleSheet.create({
     paddingTop: 20,
     // margin: 20,
   },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
+
   highlight: {
     fontWeight: '700',
   },
@@ -319,20 +305,23 @@ export default StyleSheet.create({
 
   inputStyle: {
     flex: 1,
-    borderBottomWidth: Platform.OS == 'android' ? 0 : 1,
+    borderBottomWidth: Platform.OS === 'android' ? 0 : 1,
     borderBottomColor: '#dadae8',
     fontSize: 16,
     color: Colors.textColor,
     fontFamily: 'Gotham-Light',
     lineHeight: 16,
     marginLeft: 6,
-    height: Platform.OS == 'android' ? 40 : 20,
+    height: Platform.OS === 'android' ? 40 : 20,
     marginRight: 6,
   },
 
   searchField: {
     flex: 1,
+    borderBottomWidth: 0,
+    height: Platform.OS === 'android' ? 40 : 20,
     color: '#A2A2A2',
+    lineHeight: 16,
     fontSize: 14,
     fontFamily: 'Gotham',
     fontWeight: '200',
@@ -359,7 +348,6 @@ export default StyleSheet.create({
     fontFamily: 'Gotham-Light',
     margin: 10,
     textAlign: 'center',
-    fontFamily: 'Gotham-Bold',
   },
   FollowBox: {
     flex: 1,
@@ -397,7 +385,7 @@ export default StyleSheet.create({
     padding: 3,
   },
   registerTextStyleRed: {
-    marginTop: Platform.OS == 'android' ? 10 : 0,
+    marginTop: Platform.OS === 'android' ? 10 : 0,
     color: Colors.primaryColor,
   },
   headerTitle: {
@@ -468,9 +456,27 @@ export default StyleSheet.create({
     width: 150,
     marginTop: 20,
     marginRight: 20,
-    borderColor: 'black',
     borderWidth: 1,
     borderColor: '#E5E5E5',
     borderRadius: 12,
+  },
+  // New Added Css
+  aboutPageTitle: {
+    color: Colors.textColor,
+    fontFamily: 'Gotham',
+    fontSize: 12,
+    fontWeight: '700',
+    textAlign: 'left',
+  },
+  aboutPageDesc: {
+    color: Colors.textColor,
+    fontFamily: 'Gotham',
+    fontSize: 12,
+    flex: 1,
+    alignSelf: 'center',
+    textAlign: 'left',
+    justifyContent: 'center',
+    marginTop: 12,
+    marginBottom: 12,
   },
 });
