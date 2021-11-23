@@ -12,10 +12,10 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		1F226578BD1C46379F8E489B /* GothamBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 139FC373F1574479B94282CE /* GothamBold.otf */; };
-		24B82BB27CC9E67B9086D108 /* libPods-wonderbitesApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B55B262E08E068EA6AEFDEE /* libPods-wonderbitesApp.a */; };
 		36B46BFB77074BBBBD671256 /* GothamMedium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2B3F6E9E9E524B558B75AA9E /* GothamMedium.otf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		980546F327046B9100233C1C /* Gotham-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5CA7673F4A6341AEBC61E435 /* Gotham-Light.otf */; };
+		AF3D6967B376D1852F8E453C /* libPods-wonderbitesApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B55B262E08E068EA6AEFDEE /* libPods-wonderbitesApp.a */; };
 		B1C2AEDE9B3FB3691FC4EE48 /* libPods-wonderbitesApp-wonderbitesAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D1CD5AD19F8BAECB9567F2B /* libPods-wonderbitesApp-wonderbitesAppTests.a */; };
 		DFF57EE4A61F48B7906A66A6 /* GothamBook.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C79E688A5D745AC85B38256 /* GothamBook.otf */; };
 /* End PBXBuildFile section */
@@ -34,8 +34,11 @@
 		00E356EE1AD99517003FC87E /* wonderbitesAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wonderbitesAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* wonderbitesAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = wonderbitesAppTests.m; sourceTree = "<group>"; };
+		047FF9817F9E4F128DEBDBF7 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
+		060511A4773D4CC68036E92F /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 		0D1CD5AD19F8BAECB9567F2B /* libPods-wonderbitesApp-wonderbitesAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-wonderbitesApp-wonderbitesAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1084E01B84EEEB51B31E413A /* Pods-wonderbitesApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wonderbitesApp.release.xcconfig"; path = "Target Support Files/Pods-wonderbitesApp/Pods-wonderbitesApp.release.xcconfig"; sourceTree = "<group>"; };
+		1104384D00F24E7B824DB043 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		139FC373F1574479B94282CE /* GothamBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = GothamBold.otf; path = ../assets/fonts/GothamBold.otf; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* wonderbitesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wonderbitesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = wonderbitesApp/AppDelegate.h; sourceTree = "<group>"; };
@@ -45,18 +48,31 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = wonderbitesApp/main.m; sourceTree = "<group>"; };
 		28888FFAB648E40C8528719D /* Pods-wonderbitesApp-wonderbitesAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wonderbitesApp-wonderbitesAppTests.release.xcconfig"; path = "Target Support Files/Pods-wonderbitesApp-wonderbitesAppTests/Pods-wonderbitesApp-wonderbitesAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		2B3F6E9E9E524B558B75AA9E /* GothamMedium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = GothamMedium.otf; path = ../assets/fonts/GothamMedium.otf; sourceTree = "<group>"; };
+		461477899E2D4C4DA089243B /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		49459D4A4195835478C01E4D /* Pods-wonderbitesApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wonderbitesApp.debug.xcconfig"; path = "Target Support Files/Pods-wonderbitesApp/Pods-wonderbitesApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4C79E688A5D745AC85B38256 /* GothamBook.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = GothamBook.otf; path = ../assets/fonts/GothamBook.otf; sourceTree = "<group>"; };
+		4CBB7A8A2B3242A5A07B8B81 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
 		5CA7673F4A6341AEBC61E435 /* Gotham-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Gotham-Light.otf"; path = "../assets/fonts/Gotham-Light.otf"; sourceTree = "<group>"; };
 		602AE51E9BBE4D659FDE797E /* GothamBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = GothamBold.ttf; path = ../assets/fonts/GothamBold.ttf; sourceTree = "<group>"; };
+		6592FF56833A487B99E209C9 /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
 		686579817B98B89FAC55E66D /* Pods-wonderbitesApp-wonderbitesAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wonderbitesApp-wonderbitesAppTests.debug.xcconfig"; path = "Target Support Files/Pods-wonderbitesApp-wonderbitesAppTests/Pods-wonderbitesApp-wonderbitesAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		68E012B831874EE7914991AE /* GothamMedium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = GothamMedium.ttf; path = ../assets/fonts/GothamMedium.ttf; sourceTree = "<group>"; };
 		6B55B262E08E068EA6AEFDEE /* libPods-wonderbitesApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-wonderbitesApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		75F9E6BC0D4B4050A1888AD3 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
+		76E8D2A5D7C34471B6E0A12C /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		7CABB7A9AB5B42B49411C6F9 /* Gotham-Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Gotham-Black.otf"; path = "../assets/fonts/Gotham-Black.otf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = wonderbitesApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9CD0332B41704555AA063642 /* Gotham-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Gotham-Bold.otf"; path = "../assets/fonts/Gotham-Bold.otf"; sourceTree = "<group>"; };
+		A385DD211A3B4CE19582D980 /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
+		BA4450C4E14243F5AC387E54 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
+		BA974B3FE1BC4D04AE1C7EDD /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
+		C42DC7F855F14F4695039D69 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
+		CA1BD6E94BE54AEEA7CE05E0 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
+		D68C861246914D0D9B16060F /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 		DD31CC084F3240D5970B62F8 /* GothamBook.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = GothamBook.ttf; path = ../assets/fonts/GothamBook.ttf; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		ED3C3205DF46443481B3B1B0 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
+		F77BBB06784B4A6A938F719C /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24B82BB27CC9E67B9086D108 /* libPods-wonderbitesApp.a in Frameworks */,
+				AF3D6967B376D1852F8E453C /* libPods-wonderbitesApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +147,22 @@
 				139FC373F1574479B94282CE /* GothamBold.otf */,
 				4C79E688A5D745AC85B38256 /* GothamBook.otf */,
 				2B3F6E9E9E524B558B75AA9E /* GothamMedium.otf */,
+				6592FF56833A487B99E209C9 /* AntDesign.ttf */,
+				BA4450C4E14243F5AC387E54 /* Entypo.ttf */,
+				76E8D2A5D7C34471B6E0A12C /* EvilIcons.ttf */,
+				D68C861246914D0D9B16060F /* Feather.ttf */,
+				047FF9817F9E4F128DEBDBF7 /* FontAwesome.ttf */,
+				F77BBB06784B4A6A938F719C /* FontAwesome5_Brands.ttf */,
+				4CBB7A8A2B3242A5A07B8B81 /* FontAwesome5_Regular.ttf */,
+				C42DC7F855F14F4695039D69 /* FontAwesome5_Solid.ttf */,
+				A385DD211A3B4CE19582D980 /* Fontisto.ttf */,
+				BA974B3FE1BC4D04AE1C7EDD /* Foundation.ttf */,
+				461477899E2D4C4DA089243B /* Ionicons.ttf */,
+				75F9E6BC0D4B4050A1888AD3 /* MaterialCommunityIcons.ttf */,
+				ED3C3205DF46443481B3B1B0 /* MaterialIcons.ttf */,
+				1104384D00F24E7B824DB043 /* Octicons.ttf */,
+				CA1BD6E94BE54AEEA7CE05E0 /* SimpleLineIcons.ttf */,
+				060511A4773D4CC68036E92F /* Zocial.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
