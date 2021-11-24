@@ -1,9 +1,9 @@
 import React from 'react';
-import {View, Text, Image, TextInput, StatusBar} from 'react-native';
-import MyButton from '../../components/MyButton';
-import styles from '../../styleSheet/MainStyle';
-import InputField from '../../components/InputField';
-import UnderlineView from '../../components/underlineView';
+import {View, Text, Image, StatusBar} from 'react-native';
+import MyButton from '../components/MyButton';
+import styles from '../styleSheet/MainStyle';
+import InputField from '../components/InputField';
+import MainStyle from '../styleSheet/MainStyle';
 const ResetPasswordScreen = props => {
   return (
     <View style={styles.mainBody}>
@@ -66,8 +66,8 @@ ResetPasswordScreen.navigationOptions = {
   headerTitle: <Text style={styles.headerTitle}> Reset Password </Text>,
   headerBackImage: (
     <Image
-      source={require('../../images/back.png')}
-      style={{width: 12, height: 21, marginLeft: 16, resizeMode: 'contain'}}
+      source={require('../images/back.png')}
+      style={MainStyle.navBackButton}
     />
   ),
   headerBackTitleVisible: false,

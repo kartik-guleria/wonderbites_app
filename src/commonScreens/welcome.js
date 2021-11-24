@@ -1,22 +1,16 @@
 import React from 'react';
 import {
-  MainStyleheet,
-  TextInput,
   View,
   Text,
-  ScrollView,
   Image,
   SafeAreaView,
-  Keyboard,
   TouchableOpacity,
   StyleSheet,
   StatusBar,
   ImageBackground,
 } from 'react-native';
-import MyButton from '../../components/MyButton';
-import MyGrayButton from '../../components/MyGrayButton';
-import MainStyle from '../../styleSheet/MainStyle';
-import Colors from '../../constants/Colors';
+import MyGrayButton from '../components/MyGrayButton';
+import MainStyle from '../styleSheet/MainStyle';
 import Geolocation from '@react-native-community/geolocation';
 
 const welcome = props => {
@@ -32,19 +26,19 @@ const welcome = props => {
           height: '100%',
         }}>
         <ImageBackground
-          source={require('../../images/Main.jpg')}
+          source={require('../images/Main.jpg')}
           resizeMode="cover"
           style={styles.image}>
           <View>
             <TouchableOpacity
               onPress={() => props.navigation.navigate('SideMenu')}>
               <Image
-                source={require('../../images/drawer.png')}
+                source={require('../images/drawer.png')}
                 style={{width: 23, height: 14, marginLeft: 16}}
               />
             </TouchableOpacity>
             <Image
-              source={require('../../images/whiteLogo.png')}
+              source={require('../images/whiteLogo.png')}
               style={{
                 width: 152,
                 height: 18,
@@ -92,7 +86,6 @@ const styles = StyleSheet.create({
     marginRight: 15,
     marginBottom: 20,
     justifyContent: 'center',
-    // padding: 10,
   },
   image: {
     flex: 1,

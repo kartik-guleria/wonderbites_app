@@ -8,9 +8,9 @@ import {
   StatusBar,
   TouchableOpacity,
 } from 'react-native';
-import MyButton from '../../components/MyButton';
-import MainStyle from '../../styleSheet/MainStyle';
-import InputField from '../../components/InputField';
+import MyButton from '../components/MyButton';
+import MainStyle from '../styleSheet/MainStyle';
+import InputField from '../components/InputField';
 const SignUpScreen = props => {
   return (
     <ScrollView style={{backgroundColor: '#FFFFFF'}}>
@@ -68,12 +68,6 @@ const SignUpScreen = props => {
               blurOnSubmit={false}
             />
           </View>
-
-          {/* <CheckBox
-        value={isSelected}
-        onValueChange={setSelection}
-        style={MainStyle.checkbox}
-      /> */}
           <View
             style={{
               flexDirection: 'row',
@@ -89,7 +83,7 @@ const SignUpScreen = props => {
                 justifyContent: 'center',
                 resizeMode: 'contain',
               }}
-              source={require('../../images/checkBox.png')}
+              source={require('../images/checkBox.png')}
             />
             <View style={{alignContent: 'center'}}>
               <Text style={MainStyle.registerTextStyle}>
@@ -140,8 +134,8 @@ SignUpScreen.navigationOptions = {
   headerTitle: <Text style={MainStyle.headerTitle}> Sign up </Text>,
   headerBackImage: (
     <Image
-      source={require('../../images/back.png')}
-      style={{width: 12, height: 21, marginLeft: 16, resizeMode: 'contain'}}
+      source={require('../images/back.png')}
+      style={MainStyle.navBackButton}
     />
   ),
   headerBackTitleVisible: false,

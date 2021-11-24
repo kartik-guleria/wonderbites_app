@@ -1,17 +1,13 @@
 import * as React from 'react';
-import MainStyles from '../../styleSheet/MainStyle';
-import AppColor from '../../constants/Colors';
-import MyButton from '../../components/MyButton';
-import BoxShadow from '../../components/BoxShadow';
+import MainStyles from '../styleSheet/MainStyle';
+import AppColor from '../constants/Colors';
+import MyButton from '../components/MyButton';
 import {
   SafeAreaView,
   TouchableOpacity,
   Text,
   TextInput,
-  Button,
-  Keyboard,
   Image,
-  useColorScheme,
   View,
 } from 'react-native';
 
@@ -57,7 +53,7 @@ const SignInToJoin = props => {
             alignItems: 'center',
           }}>
           <Image
-            source={require('../../images/country.png')}
+            source={require('../images/country.png')}
             style={{
               marginLeft: 12,
               width: 25,
@@ -77,7 +73,7 @@ const SignInToJoin = props => {
               height: 10,
               resizeMode: 'contain',
             }}
-            source={require('../../images/downArr.png')}
+            source={require('../images/downArr.png')}
 
             //onPress={() => alert('Login with Facebook')}
           />
@@ -145,9 +141,8 @@ const SignInToJoin = props => {
                   marginTop: 18,
                 }}>
                 <Image
-                  source={require('../../images/sendEmail.png')}
+                  source={require('../images/sendEmail.png')}
                   style={{
-                    width: 20,
                     height: 16,
                     alignItems: 'flex-start',
                     resizeMode: 'contain',
@@ -200,7 +195,7 @@ const SignInToJoin = props => {
                   flexDirection: 'row',
                 }}>
                 <Image
-                  source={require('../../images/facebook-blue.png')}
+                  source={require('../images/facebook-blue.png')}
                   style={{marginLeft: 12, width: 25, height: 25}}
                 />
 
@@ -241,7 +236,7 @@ const SignInToJoin = props => {
                   justifyContent: 'center',
                 }}>
                 <Image
-                  source={require('../../images/google.png')}
+                  source={require('../images/google.png')}
                   style={{width: 24, height: 24}}
                 />
                 <View style={{marginLeft: 17, marginTop: 5}}>
@@ -268,8 +263,8 @@ SignInToJoin.navigationOptions = {
   headerTitle: <Text style={MainStyles.headerTitle}> </Text>,
   headerBackImage: (
     <Image
-      source={require('../../images/cross-black.png')}
-      style={{width: 20, height: 20, marginLeft: 17, resizeMode: 'contain'}}
+      source={require('../images/cross-black.png')}
+      style={MainStyles.navBackButton}
     />
   ),
   headerBackTitleVisible: false,

@@ -1,9 +1,9 @@
 import React from 'react';
 import {View, Text, StyleSheet, Image, StatusBar} from 'react-native';
-import MainStyles from '../../styleSheet/MainStyle';
-import Colors from '../../constants/Colors';
-import UnderlineView from '../../components/underlineView';
-import WaterMarkView from '../../components/WaterMarkView';
+import MainStyles from '../styleSheet/MainStyle';
+import Colors from '../constants/Colors';
+import UnderlineView from '../components/underlineView';
+import WaterMarkView from '../components/WaterMarkView';
 
 const TermsConditionScreen = props => {
   return (
@@ -71,8 +71,8 @@ TermsConditionScreen.navigationOptions = {
   headerTitle: <Text style={MainStyles.headerTitle}> Content Policy </Text>,
   headerBackImage: (
     <Image
-      source={require('../../images/back.png')}
-      style={{width: 12, height: 21, marginLeft: 16, resizeMode: 'contain'}}
+      source={require('../images/back.png')}
+      style={MainStyles.navBackButton}
     />
   ),
   headerBackTitleVisible: false,

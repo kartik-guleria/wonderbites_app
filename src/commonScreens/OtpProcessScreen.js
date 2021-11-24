@@ -1,21 +1,8 @@
 import React from 'react';
-import {
-  MainStyleheet,
-  TextInput,
-  View,
-  Text,
-  ScrollView,
-  Image,
-  StatusBar,
-  Button,
-  Keyboard,
-  TouchableOpacity,
-  KeyboardAvoidingView,
-  StyleSheet,
-} from 'react-native';
-import MyButton from '../../components/MyButton';
-import MainStyle from '../../styleSheet/MainStyle';
-import InputField from '../../components/InputField';
+import {View, Text, Image, StatusBar} from 'react-native';
+import MyButton from '../components/MyButton';
+import MainStyle from '../styleSheet/MainStyle';
+import InputField from '../components/InputField';
 const OtpProcessScreen = props => {
   return (
     <View style={MainStyle.mainBody}>
@@ -66,18 +53,11 @@ OtpProcessScreen.navigationOptions = {
   headerTitle: <Text style={MainStyle.headerTitle}> Personal Details </Text>,
   headerBackImage: (
     <Image
-      source={require('../../images/back.png')}
+      source={require('../images/back.png')}
       style={MainStyle.navBackButton}
     />
   ),
   headerBackTitleVisible: false,
-  // headerRight: () => (
-  //   <Button
-  //     onPress={() => alert('This is a button!')}
-  //     title="Info"
-  //     color="#000"
-  //   />
-  // ),
 };
 
 export default OtpProcessScreen;

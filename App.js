@@ -1,6 +1,5 @@
 import React from 'react';
-// import {enableScreens} from 'react-native-screens';
-import MainNavigatior from './src/navigation/MainNavigatior';
+import MainNavigatior from './src/navigation/MainNavigator';
 
 export default function App() {
   return <MainNavigatior />;

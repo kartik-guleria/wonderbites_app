@@ -1,9 +1,9 @@
 import React from 'react';
-import {View, Text, StyleSheet, Image, StatusBar} from 'react-native';
-import MainStyles from '../../styleSheet/MainStyle';
-import Colors from '../../constants/Colors';
-import WaterMarkView from '../../components/WaterMarkView';
-import UnderlineView from '../../components/underlineView';
+import {View, Text, Image, StatusBar} from 'react-native';
+import MainStyles from '../styleSheet/MainStyle';
+import Colors from '../constants/Colors';
+import WaterMarkView from '../components/WaterMarkView';
+import UnderlineView from '../components/underlineView';
 const ChangeEmailScreen = props => {
   return (
     <View style={MainStyles.mainBody}>
@@ -31,8 +31,8 @@ ChangeEmailScreen.navigationOptions = {
   headerTitle: <Text style={MainStyles.headerTitle}> Settings </Text>,
   headerBackImage: (
     <Image
-      source={require('../../images/back.png')}
-      style={{width: 30, height: 20, marginLeft: 17, resizeMode: 'contain'}}
+      source={require('../images/back.png')}
+      style={MainStyles.navBackButton}
     />
   ),
   headerBackTitleVisible: false,

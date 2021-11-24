@@ -77,6 +77,7 @@ const CategoryScreen = props => {
             width: Dimensions.get('window').width,
             backgroundColor: '#FFFFFF',
           }}>
+          <HeaderRight />
           <FlatList
             numColumns={5}
             data={CUISINES}
@@ -93,54 +94,14 @@ const CategoryScreen = props => {
     </View>
   );
 };
-
-// CategoryScreen.navigationOptions = navigationData => {
-//   const catId = navigationData.navigation.getParam('categoryId');
-//   const selectedCategory = CATEGORIES.find(category => category.id === catId);
-//   return {
-//     headerTitle: selectedCategory.title,
-//   };
-// };
-
+CategoryScreen.navigationOptions = {title: 'Welcome', headerShown: false};
 export default CategoryScreen;
-CategoryScreen.navigationOptions = {
-  headerTitle: <Text style={MainStyle.headerTitle}></Text>,
-  headerBackImage: (
-    <Image
-      source={require('../../images/smallLogo.png')}
-      style={{width: 135, height: 30, marginLeft: 17, resizeMode: 'contain'}}
-    />
-  ),
-  headerBackTitleVisible: false,
-  headerRight: () => <HeaderRight />,
-};
-//Not Working Start
-// CategoryScreen.naviagtionOptions = navigationData => {
-//   console.log(navigationData);
-//   const categoryId = navigationData.navigation.getParam('categoryId');
-//   const selectedCategory = CATEGORIES.find(
-//     category => category.id === categoryId,
-//   );
-//   return {
-//     headerTitle: selectedCategory.title,
-//     headerStyle: {
-//       backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : '',
-//     },
-//     headerTintColor: Platform.OS === 'android' ? 'white' : Colors.primaryColor,
-//   };
-// };
 
-// CategoryScreen.navigationOptions = {
-//   headerTitle: 'Categoryr Screen',
-// };
-// Not Working END
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#FFFFFF',
-    width: '100%',
-    // width: Dimensions.get('window').width,
   },
 });
