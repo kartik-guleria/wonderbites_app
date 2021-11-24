@@ -1,18 +1,10 @@
 import React from 'react';
-import {
-  StyleSheet,
-  TextInput,
-  View,
-  Text,
-  Image,
-  KeyboardAvoidingView,
-} from 'react-native';
-import Mainstyles from '../../styleSheet/MainStyle';
-import MyButton from '../../components/MyButton';
+import {TextInput, View, Text, Image, KeyboardAvoidingView} from 'react-native';
+import Mainstyles from '../styleSheet/MainStyle';
+import MyButton from '../components/MyButton';
 const VerificationCodeScreen = props => {
   return (
     <View style={Mainstyles.screen}>
-      {/* <SafeAreaView style={Mainstyles.safeAreaContainerLight} > */}
       <View style={Mainstyles.MainContainerLight}>
         <KeyboardAvoidingView enabled>
           <View>
@@ -89,7 +81,6 @@ const VerificationCodeScreen = props => {
             Try Again
           </Text>
         </KeyboardAvoidingView>
-        {/* </ScrollView> */}
       </View>
       <View style={{bottom: 90, width: '100%', backgroundColor: '#dddddd'}}>
         <View
@@ -104,7 +95,7 @@ const VerificationCodeScreen = props => {
             }}>
             <Image
               style={{height: 15, width: 15}}
-              source={require('../../images/time_Black.png')}
+              source={require('../images/time_Black.png')}
             />
             <Text
               style={[
@@ -132,20 +123,13 @@ const VerificationCodeScreen = props => {
     </View>
   );
 };
-const styles = StyleSheet.create({
-  screen: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});
 
 export default VerificationCodeScreen;
 VerificationCodeScreen.navigationOptions = {
   headerTitle: <Text style={Mainstyles.headerTitle}>Verification Code</Text>,
   headerBackImage: (
     <Image
-      source={require('../../images/back.png')}
+      source={require('../images/back.png')}
       style={Mainstyles.navBackButton}
     />
   ),

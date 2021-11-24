@@ -1,17 +1,8 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  View,
-  FlatList,
-  Text,
-  TouchableOpacity,
-  Image,
-  StatusBar,
-} from 'react-native';
-import MainStyle from '../../styleSheet/MainStyle';
-import UnderlineView from '../../components/underlineView';
-import WaterMarkView from '../../components/WaterMarkView';
-// import {Icon} from 'react-native-elements';
+import {View, FlatList, Text, Image, StatusBar} from 'react-native';
+import MainStyle from '../styleSheet/MainStyle';
+import UnderlineView from '../components/underlineView';
+import WaterMarkView from '../components/WaterMarkView';
 
 const DATA = [
   {
@@ -48,7 +39,6 @@ const Item = ({title}) => (
         {
           textAlign: 'left',
           fontWeight: '500',
-          // marginBottom: 8,
           marginLeft: 20,
         },
       ]}>
@@ -87,8 +77,8 @@ SelectLangScreen.navigationOptions = {
   headerTitle: <Text style={MainStyle.headerTitle}> Language </Text>,
   headerBackImage: (
     <Image
-      source={require('../../images/back.png')}
-      style={{width: 30, height: 20, marginLeft: 17, resizeMode: 'contain'}}
+      source={require('../images/back.png')}
+      style={MainStyle.navBackButton}
     />
   ),
   headerBackTitleVisible: false,

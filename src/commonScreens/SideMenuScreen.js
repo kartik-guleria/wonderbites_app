@@ -8,38 +8,38 @@ import {
   StatusBar,
   Linking,
 } from 'react-native';
-import MainStyle from '../../styleSheet/MainStyle';
-import UnderlineView from '../../components/underlineView';
+import MainStyle from '../styleSheet/MainStyle';
+import UnderlineView from '../components/underlineView';
 // import {Icon} from 'react-native-elements';
 
 const DATA = [
   {
     id: 1,
-    icon_image: require('../../images/Phone.png'),
+    icon_image: require('../images/Phone.png'),
     title: 'Call us',
     screen: '',
   },
   {
     id: 2,
-    icon_image: require('../../images/Terms.png'),
+    icon_image: require('../images/Terms.png'),
     title: 'Terms',
     screen: 'TermsCondition',
   },
   {
     id: 3,
-    icon_image: require('../../images/Privacy.png'),
+    icon_image: require('../images/Privacy.png'),
     title: 'Privacy policy',
     screen: 'TermsCondition',
   },
   {
     id: 4,
-    icon_image: require('../../images/currency.png'),
+    icon_image: require('../images/currency.png'),
     title: 'Content policy',
     screen: 'TermsCondition',
   },
   {
     id: 5,
-    icon_image: require('../../images/Lang.png'),
+    icon_image: require('../images/Lang.png'),
     title: 'English',
     screen: 'SelectLang',
   },
@@ -58,25 +58,25 @@ const getFooter = () => {
         ]}>
         <View style={{height: 70}}>
           <Image
-            source={require('../../images/facebook.png')}
+            source={require('../images/facebook.png')}
             style={MainStyle.FollowBox}
           />
         </View>
         <View>
           <Image
-            source={require('../../images/Insta.png')}
+            source={require('../images/Insta.png')}
             style={MainStyle.FollowBox}
           />
         </View>
         <View>
           <Image
-            source={require('../../images/tiktok.png')}
+            source={require('../images/tiktok.png')}
             style={MainStyle.FollowBox}
           />
         </View>
         <View>
           <Image
-            source={require('../../images/youtube.png')}
+            source={require('../images/youtube.png')}
             style={MainStyle.FollowBox}
           />
         </View>
@@ -183,8 +183,8 @@ SideMenuScreen.navigationOptions = {
   headerTitle: <Text style={MainStyle.headerTitle}> </Text>,
   headerBackImage: (
     <Image
-      source={require('../../images/cross-black.png')}
-      style={{width: 20, height: 20, marginLeft: 16, resizeMode: 'contain'}}
+      source={require('../images/cross-black.png')}
+      style={MainStyle.navBackButton}
     />
   ),
   headerBackTitleVisible: false,

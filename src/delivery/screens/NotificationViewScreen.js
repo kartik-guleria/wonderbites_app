@@ -116,7 +116,7 @@ NotificationViewScreen.navigationOptions = {
   headerBackImage: (
     <Image
       source={require('../../images/back.png')}
-      style={{width: 12, height: 21, marginLeft: 16, resizeMode: 'contain'}}
+      style={MainStyles.navBackButton}
     />
   ),
   headerBackTitleVisible: false,

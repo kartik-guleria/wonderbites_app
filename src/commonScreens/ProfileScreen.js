@@ -8,9 +8,9 @@ import {
   FlatList,
   SafeAreaView,
 } from 'react-native';
-import {PROFILECATEGORIES} from '../../data/dummy-data';
-import MainStyle from '../../styleSheet/MainStyle';
-import UnderlineView from '../../components/underlineView';
+import {PROFILECATEGORIES} from '../data/dummy-data';
+import MainStyle from '../styleSheet/MainStyle';
+import UnderlineView from '../components/underlineView';
 
 const ProfileScreen = props => {
   const getFooter = () => {
@@ -37,7 +37,7 @@ const ProfileScreen = props => {
         <View style={styles.profileDetailView}>
           <Image
             style={styles.profileImage}
-            source={require('../../images/profile.png')}
+            source={require('../images/profile.png')}
           />
           <View style={{marginLeft: 24}}>
             <Text style={styles.name}>John Doe</Text>
@@ -71,7 +71,7 @@ const ProfileScreen = props => {
               </Text>
               <Image
                 style={styles.arrowImage}
-                source={require('../../images/arrowRed.png')}
+                source={require('../images/arrowRed.png')}
               />
             </View>
           </View>
@@ -104,7 +104,7 @@ ProfileScreen.navigationOptions = {
   headerTitle: <Text style={MainStyle.headerTitle}>Profile</Text>,
   headerBackImage: (
     <Image
-      source={require('../../images/back.png')}
+      source={require('../images/back.png')}
       style={MainStyle.navBackButton}
     />
   ),
@@ -161,7 +161,6 @@ const styles = StyleSheet.create({
     fontFamily: 'Gotham',
   },
   logoutButton: {
-    color: '#2B2C2D',
     fontSize: 16,
     fontWeight: '500',
     marginTop: 20,

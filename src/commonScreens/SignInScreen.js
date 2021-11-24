@@ -7,11 +7,9 @@ import {
   StatusBar,
   TouchableOpacity,
 } from 'react-native';
-import MyButton from '../../components/MyButton';
-import MainStyle from '../../styleSheet/MainStyle';
-import InputField from '../../components/InputField';
-// import Home from '../screens/HomeScreen';
-// import Main from '../screens/MainScreen';
+import MyButton from '../components/MyButton';
+import MainStyle from '../styleSheet/MainStyle';
+import InputField from '../components/InputField';
 const SignInScreen = props => {
   return (
     <View style={MainStyle.mainBody}>
@@ -84,8 +82,8 @@ SignInScreen.navigationOptions = {
   headerTitle: <Text style={MainStyle.headerTitle}> Log in </Text>,
   headerBackImage: (
     <Image
-      source={require('../../images/back.png')}
-      style={{width: 12, height: 21, marginLeft: 16, resizeMode: 'contain'}}
+      source={require('../images/back.png')}
+      style={MainStyle.navBackButton}
     />
   ),
   headerBackTitleVisible: false,

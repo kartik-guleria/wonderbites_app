@@ -14,7 +14,6 @@ import {INGRIDIENTS, PRODUCTS} from '../../data/dummy-data';
 import Colors from '../../constants/Colors';
 import UnderlineView from '../../components/underlineView';
 import MainStyle from '../../styleSheet/MainStyle';
-import HeaderRight from '../../components/HeaderRight';
 
 const ProductDetailScreen = props => {
   const prodId = props.navigation.getParam('productId');
@@ -166,41 +165,23 @@ const ProductDetailScreen = props => {
   );
 };
 
-ProductDetailScreen.navigationOptions = navigationData => {
-  const prodId = navigationData.navigation.getParam('productId');
-  const selectedProduct = PRODUCTS.find(product => product.id === prodId);
-  return {
-    headerTitle: selectedProduct.title,
-    headerRight: (
-      <HeaderButtons HeaderButtonComponent={CustomHeaderButton}>
-        <Item
-          title="Favourite"
-          iconName="ios-star"
-          onPress={() => {
-            console.log('Mark as favourite');
-          }}
-        />
-      </HeaderButtons>
-    ),
-  };
-};
 export default ProductDetailScreen;
-// ProductDetailScreen.navigationOptions = {
-//   headerTitle: <Text style={MainStyle.headerTitle}> </Text>,
-//   headerBackImage: (
-//     <Image
-//       source={require('../../images/cross-black.png')}
-//       style={{width: 30, height: 30, marginLeft: 16, resizeMode: 'contain'}}
-//     />
-//   ),
-//   headerBackTitleVisible: false,
-//   headerRight: (
-//     <Image
-//       source={require('../../images/share.png')}
-//       style={{width: 22, height: 24, marginRight: 16, resizeMode: 'contain'}}
-//     />
-//   ),
-// };
+ProductDetailScreen.navigationOptions = {
+  headerTitle: <Text style={MainStyle.headerTitle}> </Text>,
+  headerBackImage: (
+    <Image
+      source={require('../../images/cross-black.png')}
+      style={{width: 30, height: 30, marginLeft: 16, resizeMode: 'contain'}}
+    />
+  ),
+  headerBackTitleVisible: false,
+  headerRight: (
+    <Image
+      source={require('../../images/share.png')}
+      style={{width: 22, height: 24, marginRight: 16, resizeMode: 'contain'}}
+    />
+  ),
+};
 
 const styles = StyleSheet.create({
   screen: {
@@ -214,8 +195,6 @@ const styles = StyleSheet.create({
   productItem: {
     backgroundColor: '#FFFFFF',
     borderRadius: 10,
-    // overflow: 'hidden',
-    // margin: 20,
     borderColor: Colors.primaryColor,
     shadowColor: '#000000',
     shadowOpacity: 0.15,
@@ -223,8 +202,6 @@ const styles = StyleSheet.create({
   },
   descText: {
     color: '#000000',
-    // marginLeft: 10,
-    // marginRight: 10,
     fontSize: 16,
   },
   buttonStyleRed: {
@@ -232,8 +209,6 @@ const styles = StyleSheet.create({
     height: 49,
     alignItems: 'center',
     borderRadius: 12,
-    // marginLeft: 15,
-    // marginRight: 15,
     marginBottom: 25,
     justifyContent: 'center',
     color: '#FFFFFF',
@@ -248,9 +223,6 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     borderColor: '#DDDDDD',
     borderWidth: 1,
-    // marginLeft: 15,
-    // marginRight: 15,
-    // marginTop: 40,
     marginBottom: -25,
     justifyContent: 'center',
     color: '#000000',
