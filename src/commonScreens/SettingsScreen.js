@@ -1,16 +1,8 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  View,
-  FlatList,
-  Text,
-  TouchableOpacity,
-  Image,
-  StatusBar,
-} from 'react-native';
-import MainStyle from '../../styleSheet/MainStyle';
-import UnderlineView from '../../components/underlineView';
-import WaterMarkView from '../../components/WaterMarkView';
+import {View, FlatList, Text, Image, StatusBar} from 'react-native';
+import MainStyle from '../styleSheet/MainStyle';
+import UnderlineView from '../components/underlineView';
+import WaterMarkView from '../components/WaterMarkView';
 // import {Icon} from 'react-native-elements';
 
 const DATA = [
@@ -94,8 +86,8 @@ SettingsScreen.navigationOptions = {
   headerTitle: <Text style={MainStyle.headerTitle}> Settings </Text>,
   headerBackImage: (
     <Image
-      source={require('../../images/back.png')}
-      style={{width: 12, height: 21, marginLeft: 16, resizeMode: 'contain'}}
+      source={require('../images/back.png')}
+      style={MainStyle.navBackButton}
     />
   ),
   headerBackTitleVisible: false,

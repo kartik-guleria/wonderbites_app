@@ -1,8 +1,8 @@
 import React from 'react';
 import {View, Text, Image, StatusBar} from 'react-native';
-import MainStyles from '../../styleSheet/MainStyle';
-import UnderlineView from '../../components/underlineView';
-import WaterMarkView from '../../components/WaterMarkView';
+import MainStyles from '../styleSheet/MainStyle';
+import UnderlineView from '../components/underlineView';
+import WaterMarkView from '../components/WaterMarkView';
 
 const AboutUsScreen = props => {
   return (
@@ -55,7 +55,7 @@ AboutUsScreen.navigationOptions = {
   headerTitle: <Text style={MainStyles.headerTitle}> About </Text>,
   headerBackImage: (
     <Image
-      source={require('../../images/back.png')}
+      source={require('../images/back.png')}
       style={MainStyles.navBackButton}
     />
   ),

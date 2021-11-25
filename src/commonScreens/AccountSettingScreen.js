@@ -7,9 +7,9 @@ import {
   Image,
   StatusBar,
 } from 'react-native';
-import MainStyle from '../../styleSheet/MainStyle';
-import UnderlineView from '../../components/underlineView';
-import WaterMarkView from '../../components/WaterMarkView';
+import MainStyle from '../styleSheet/MainStyle';
+import UnderlineView from '../components/underlineView';
+import WaterMarkView from '../components/WaterMarkView';
 
 const DATA = [
   {
@@ -49,7 +49,7 @@ const AccountSettingScreen = props => {
               {title}
             </Text>
             <Image
-              source={require('../../images/arrow2.png')}
+              source={require('../images/arrow2.png')}
               style={{
                 width: 8,
                 height: 14,
@@ -92,7 +92,7 @@ AccountSettingScreen.navigationOptions = {
   headerTitle: <Text style={MainStyle.headerTitle}> Settings </Text>,
   headerBackImage: (
     <Image
-      source={require('../../images/back.png')}
+      source={require('../images/back.png')}
       style={MainStyle.navBackButton}
     />
   ),

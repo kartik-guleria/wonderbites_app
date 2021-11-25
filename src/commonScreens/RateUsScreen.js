@@ -1,9 +1,8 @@
 import React from 'react';
 import {View, Text, StyleSheet, Image, StatusBar} from 'react-native';
-import MainStyles from '../../styleSheet/MainStyle';
-import MyGrayButton from '../../components/MyGrayButton';
-import MyButton from '../../components/MyButton';
-import UnderlineView from '../../components/underlineView';
+import MainStyles from '../styleSheet/MainStyle';
+import MyButton from '../components/MyButton';
+import UnderlineView from '../components/underlineView';
 
 const RateUsScreen = props => {
   return (
@@ -11,10 +10,7 @@ const RateUsScreen = props => {
       <StatusBar barStyle="dark-content" />
       <UnderlineView />
       <View style={{margin: 20}}>
-        <Image
-          source={require('../../images/RateUs.png')}
-          style={styles.image}
-        />
+        <Image source={require('../images/RateUs.png')} style={styles.image} />
         <Text
           style={[
             MainStyles.headerTitle,
@@ -40,7 +36,7 @@ const RateUsScreen = props => {
           </Text>
         </View>
         <Image
-          source={require('../../images/ratings.png')}
+          source={require('../images/ratings.png')}
           style={styles.rateImage}
         />
       </View>
@@ -78,7 +74,7 @@ RateUsScreen.navigationOptions = {
   headerTitle: <Text style={MainStyles.headerTitle}> Rate Us </Text>,
   headerBackImage: (
     <Image
-      source={require('../../images/back.png')}
+      source={require('../images/back.png')}
       style={{width: 30, height: 20, marginLeft: 17, resizeMode: 'contain'}}
     />
   ),
