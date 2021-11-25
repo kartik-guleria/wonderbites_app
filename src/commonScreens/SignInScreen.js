@@ -57,7 +57,7 @@ const SignInScreen = props => {
         <MyButton
           title="Log In"
           onSelect={() => {
-            props.navigation.navigate('Home');
+            props.navigation.navigate('DeliveryTabs');
           }}
         />
 

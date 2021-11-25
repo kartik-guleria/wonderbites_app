@@ -17,9 +17,8 @@ const images = [
   require('../../images/banner.png'),
   require('../../images/banner.png'),
 ];
-const MainScreen = props => {
-  const serviceId = props.navigation.getParam('serviceId');
-  const selectedService = SERVICES.find(service => service.id === serviceId);
+const MainScreen = (props) => {
+  // const selectedService = SERVICES.find(service => service.id === serviceId);
   const Header = () => {
     return (
       <View>
